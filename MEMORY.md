@@ -29,3 +29,9 @@
 ## Tools & Setup
 - `~/.local/bin/model` — switch between `opus` (anthropic/claude-opus-4-6) and `codex` (openai-codex/gpt-5.3-codex)
 - Local STT via faster-whisper (CPU, base model) at `~/.local/bin/whisper-transcribe`
+
+## Model Selection Rules (established 2026-06-25)
+- **Codex** (`openai-codex/gpt-5.3-codex`) — default for coding tasks: writing code, implementing features, debugging, refactoring, code reviews
+- **Opus** (`anthropic/claude-opus-4-6`) — default for: planning, orchestration, ideation, prompt engineering, writing (English prose, docs, learnings, issue descriptions), architecture decisions
+- When a task spans both (e.g. "plan and implement"), use Opus for planning then hand off implementation to Codex via sub-agent
+- Can override per-task if one model is clearly better suited
