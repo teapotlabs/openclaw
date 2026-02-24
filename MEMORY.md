@@ -2,6 +2,13 @@
 
 ## Operating Rules
 
+### Config & Memory Lives in Git (established 2026-02-24)
+- All OpenClaw config (SOUL.md, MEMORY.md, USER.md, AGENTS.md, IDENTITY.md, TOOLS.md, HEARTBEAT.md) and memory files live in `teapotlabs/openclaw` repo
+- Workspace files are symlinked to the repo at `~/. openclaw/workspace/openclaw/`
+- Any changes to config/memory/soul must be committed and pushed to `main` on GitHub
+- This serves as the canonical backup and version history
+- Use `gh-app-token` helper to get fresh tokens for git operations
+
 ### Topic-Based Group Chats (established 2026-02-24)
 - Kavi creates Telegram groups where **group name = topic**
 - **ONLY** discuss the group's topic in that group
